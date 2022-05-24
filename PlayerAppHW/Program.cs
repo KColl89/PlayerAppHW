@@ -22,11 +22,11 @@ namespace PlayerAppHW
             Player[] player = new Player[amount];
             for (int i = 0; i < amount; i++)
             {
-                Console.WriteLine("Enter player name and email:");
+                Console.WriteLine("Enter player name,email, and level:");
                 player[i] = new Player();
                 player[i].Name = Console.ReadLine();
                 player[i].Email = Console.ReadLine();
-                
+                player[i].Level = Convert.ToInt32(Console.ReadLine());
             }
 
             Console.WriteLine("Would you like to view player info? Y for yes and N for no");
@@ -37,7 +37,7 @@ namespace PlayerAppHW
                 case 'y':
                     for (int i = 0; i < amount; i++)
                     {
-                        Console.WriteLine($"Player name: {player[i].Name} id: {player[i].ID} email: {player[i].Email}");
+                        Console.WriteLine($"Player name: {player[i].Name} id: {player[i].ID} email: {player[i].Email} level: {player[i].Level}");
                     }
                     break;
                 case 'n':

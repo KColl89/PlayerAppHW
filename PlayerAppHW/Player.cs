@@ -15,6 +15,7 @@ namespace PlayerAppHW
         private readonly Guid _id = Guid.NewGuid();
         private string _name = "";
         private string _email = "";
+        private int _level = 0;
         
         public Guid ID { get { return _id; } }
 
@@ -22,6 +23,8 @@ namespace PlayerAppHW
 
         public string Name { get { return _name; } set { _name = value; } }
         public string Email { get { return _email; } set { _email = ValidateEmail(value); } }
+
+        public int Level { get { return _level; } set { _level = value; } } 
 
         public static string ValidateEmail(string check)
         {
@@ -35,9 +38,10 @@ namespace PlayerAppHW
 
         public string name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string email { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int level { get => throw new NotImplementedException(); set => throw new NotImplementedException(); } } 
     }
   
 
     
 
-}
+
