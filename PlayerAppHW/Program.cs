@@ -12,7 +12,7 @@ namespace PlayerAppHW
         public static void Main(string[] args)
         {
             int amount = 0;
-           
+            char ch;
             
             //Prompts the user for the number of players to be created.
             Console.WriteLine("How many players would you like to create? :");
@@ -29,21 +29,33 @@ namespace PlayerAppHW
                 
             }
 
-           for (int i = 0; i < amount; i++)
+            Console.WriteLine("Would you like to view player info? Y for yes and N for no");
+            ch = Convert.ToChar(Console.ReadLine());
+
+            switch (char.ToLower(ch))
             {
-                Console.WriteLine($"Player name: {player[i].Name} id: {player[i].ID} email: {player[i].Email}");
+                case 'y':
+                    for (int i = 0; i < amount; i++)
+                    {
+                        Console.WriteLine($"Player name: {player[i].Name} id: {player[i].ID} email: {player[i].Email}");
+                    }
+                    break;
+                case 'n':
+                    Console.WriteLine("Ok,Goodbye");
+                    break;
+                default:
+                    Console.WriteLine("Bad input, exiting programing");
+                    break;
+
+
             }
 
-            /*
-            Player p1 = new();
-            p1.Name = " Kendrick";
-            p1.Email = "KDot@gmail.com";
-                 
-            Console.WriteLine($"Player name: {p1.Name} id: {p1.ID} email {p1.Email}");
-            */
+
 
 
         }
     }
+
+ 
 }
 
