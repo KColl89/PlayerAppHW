@@ -12,9 +12,10 @@ namespace PlayerAppHW
         {
             Player p1 = new();
             p1.Name = " Kendrick";
+            p1.Email = "KDot@gmail.com";
 
-            Console.WriteLine($"Player name: {p1.Name} id: {p1.ID}");
+            Console.WriteLine($"Player name: {p1.Name} id: {p1.ID} email {p1.Email}");
         }
     }
-    }
 }
+

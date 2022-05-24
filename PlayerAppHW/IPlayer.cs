@@ -11,5 +11,7 @@ namespace PlayerAppHW
         Guid Id { get; }
 
         string name { get; set; }
+
+        string email { get; set; }
     }
 }
